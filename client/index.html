@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Real Estate Price Prediction</h1>
+            <p>Find out the estimated price of properties based on location, area, and number of bathrooms.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="info-section">
+            <h2>Enter Details to Get Price Estimation</h2>
+
+            <label for="location">Enter Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="area">Enter Area in Square Feet:</label>
+            <input type="number" id="area" name="area" required>
+
+            <label for="bathrooms">Enter Number of Bathrooms:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required>
+
+            <button id="estimateBtn">Estimate Price</button>
+
+            <div id="result">
+                <h2>Estimated Price: <span id="price">--</span></h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Real Estate Price Prediction. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>/* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        
+        /* Container for main content */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Form Section */
+        .form-section {
+            margin-bottom: 40px;
+        }
+        
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: linear-gradient(135deg, #66d1c1, #8ca7d9);
+        }
+        
+        /* Result Section */
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Info Section */
+        .info-section, .testimonials-section {
+            margin: 40px 0;
+        }
+        
+        .info-section h2, .testimonials-section h2 {
+            text-align: center;
+        }
+        
+        blockquote {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #74ebd5;
+            margin: 10px 0;
+        }
+        
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f1f1;
+            border-top: 1px solid #ccc;
+        }
+        </style>
+</body>
+</html>
